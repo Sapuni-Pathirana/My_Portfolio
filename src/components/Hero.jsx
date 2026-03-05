@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineMail, HiArrowRight } from 'react-icons/hi';
+import { HiArrowRight, HiDownload, HiOutlineMail } from 'react-icons/hi';
 
 export default function Hero() {
   return (
@@ -53,16 +53,14 @@ export default function Hero() {
                 View My Projects
                 <HiArrowRight size={18} />
               </Link>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                offset={-70}
+              <a
+                href="/resume.pdf"
+                download
                 className="btn btn-outline btn-primary btn-lg text-base font-semibold hover:scale-105 transition-all gap-2"
               >
-                <HiOutlineMail size={18} />
-                Contact Me
-              </Link>
+                <HiDownload size={18} />
+                Download My CV
+              </a>
             </div>
 
             {/* Social Links */}
@@ -70,7 +68,7 @@ export default function Hero() {
               <span className="text-sm text-base-content/40 font-medium">Find me on</span>
               <div className="w-8 h-px bg-base-content/20" />
               <a
-                href="https://github.com"
+                href="https://github.com/Sapuni-Pathirana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base-content/50 hover:text-primary transition-colors"
@@ -79,7 +77,7 @@ export default function Hero() {
                 <FaGithub size={22} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sapuni-madhushika-pathirana-5798a2302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base-content/50 hover:text-primary transition-colors"
@@ -88,7 +86,7 @@ export default function Hero() {
                 <FaLinkedin size={22} />
               </a>
               <a
-                href="mailto:sapuni.pathirana@example.com"
+                href="mailto:sapunimadhushikapathirana@gmail.com"
                 className="text-base-content/50 hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -99,17 +97,12 @@ export default function Hero() {
 
           {/* Right — Profile Photo */}
           <div className="flex justify-center md:justify-end animate-fade-in-up opacity-0 animation-delay-400">
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]">
-              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/5 flex items-center justify-center overflow-hidden shadow-2xl">
-                {/* Replace with: <img src="/your-photo.png" alt="Sapuni Pathirana" className="w-full h-full object-cover" /> */}
-                <div className="text-center">
-                  <div className="text-7xl lg:text-8xl mb-4">👩‍💻</div>
-                  <p className="text-sm text-base-content/30 font-mono">your-photo.png</p>
-                </div>
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-2xl -z-10" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary/10 rounded-xl -z-10" />
+            <div className="relative w-72 sm:w-80 md:w-[22rem] lg:w-[26rem]">
+              <img
+                src="/images/Profile.jpeg"
+                alt="Sapuni Pathirana"
+                className="w-full object-cover drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>

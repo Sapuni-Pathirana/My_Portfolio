@@ -81,6 +81,37 @@ body {
   background-clip: text;
 }
 
+/* Nav link animated underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #6419e6, #d926a9);
+  border-radius: 1px;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+.nav-link-active {
+  color: oklch(var(--p)) !important;
+  font-weight: 600;
+}
+
+.nav-link-active::after {
+  width: 60%;
+}
+
+[data-theme="dark"] .nav-link::after {
+  background: linear-gradient(135deg, #7c3aed, #e879a4);
+}
+
 /* Section padding */
 .section-padding {
   padding: 5rem 1.5rem;

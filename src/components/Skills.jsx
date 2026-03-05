@@ -3,7 +3,7 @@ import {
 } from 'react-icons/fa';
 import {
   SiJavascript, SiTypescript, SiMongodb, SiMysql, SiTailwindcss, SiSpringboot,
-  SiPostman, SiExpress,
+  SiPostman, SiExpress, SiFlutter, SiDjango, SiPostgresql,
 } from 'react-icons/si';
 import useScrollReveal from '../hooks/useScrollReveal';
 
@@ -17,6 +17,7 @@ const skillCategories = [
       { name: 'HTML5', icon: <FaHtml5 /> },
       { name: 'CSS3', icon: <FaCss3Alt /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+      { name: 'Flutter', icon: <SiFlutter /> },
     ],
   },
   {
@@ -25,6 +26,7 @@ const skillCategories = [
       { name: 'Node.js', icon: <FaNodeJs /> },
       { name: 'Express.js', icon: <SiExpress /> },
       { name: 'Spring Boot', icon: <SiSpringboot /> },
+      { name: 'Django', icon: <SiDjango /> },
       { name: 'Python', icon: <FaPython /> },
       { name: 'Java', icon: <FaJava /> },
     ],
@@ -34,6 +36,7 @@ const skillCategories = [
     skills: [
       { name: 'MongoDB', icon: <SiMongodb /> },
       { name: 'MySQL', icon: <SiMysql /> },
+      { name: 'PostgreSQL', icon: <SiPostgresql /> },
     ],
   },
   {

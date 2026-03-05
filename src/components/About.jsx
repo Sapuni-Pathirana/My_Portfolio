@@ -43,14 +43,11 @@ export default function About() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-6">
-                  <div className="text-6xl mb-3">👩‍💻</div>
-                  <p className="text-sm text-base-content/50 font-mono">your-photo.jpg</p>
-                </div>
+              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 overflow-hidden">
+                <img src="/images/Profile.jpeg" alt="Sapuni Pathirana" className="w-full h-full object-cover" />
               </div>
               {/* Decorative border */}
               <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-primary/20 -z-10" />
