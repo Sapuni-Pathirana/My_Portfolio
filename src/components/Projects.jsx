@@ -1,44 +1,6 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import useScrollReveal from '../hooks/useScrollReveal';
-
-const projects = [
-  {
-    title: 'E-Commerce Platform',
-    description:
-      'A full-stack e-commerce web application with user authentication, product management, shopping cart, and payment integration. Built with a modern tech stack for scalability and performance.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-    github: 'https://github.com',
-    live: '#',
-    image: null,
-  },
-  {
-    title: 'Task Management System',
-    description:
-      'A collaborative task management application with real-time updates, drag-and-drop functionality, role-based access control, and an intuitive dashboard for tracking project progress.',
-    tags: ['React', 'Spring Boot', 'MySQL', 'REST API'],
-    github: 'https://github.com',
-    live: '#',
-    image: null,
-  },
-  {
-    title: 'Student Portal',
-    description:
-      'A student information system for managing course registrations, grade tracking, and academic scheduling. Features a responsive admin dashboard with role-based permissions.',
-    tags: ['Java', 'Spring Boot', 'MySQL', 'React', 'Bootstrap'],
-    github: 'https://github.com',
-    live: '#',
-    image: null,
-  },
-  {
-    title: 'Weather Dashboard',
-    description:
-      'A real-time weather dashboard that fetches data from external APIs and displays forecasts, charts, and location-based weather info with a clean, interactive UI.',
-    tags: ['React', 'API Integration', 'Chart.js', 'CSS Modules'],
-    github: 'https://github.com',
-    live: '#',
-    image: null,
-  },
-];
+import { projects } from './About';
 
 export default function Projects() {
   const { ref, isVisible } = useScrollReveal();
@@ -59,65 +21,77 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div
-          className={`grid md:grid-cols-2 gap-6 transition-all duration-700 ${
+          className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="card bg-base-100 shadow-sm border border-base-300/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-            >
-              {/* Project Image Placeholder */}
-              <figure className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center border-b border-base-300/50">
-                <div className="text-center">
-                  <div className="text-4xl mb-2 opacity-40 group-hover:opacity-70 transition-opacity">
-                    {i === 0 ? '🛒' : i === 1 ? '📋' : i === 2 ? '🎓' : '🌤️'}
+          {projects.map((project, i) => {
+            const IconComponent = project.icon;
+            return (
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                {/* Gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-950 opacity-95 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Decorative circles */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
+
+                {/* Content */}
+                <div className="relative z-10 p-8 h-full flex flex-col">
+                  {/* Icon */}
+                  <div className="mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <IconComponent className="w-14 h-14 text-white drop-shadow-lg" />
                   </div>
-                  <p className="text-xs text-base-content/40 font-mono">screenshot.png</p>
-                </div>
-              </figure>
 
-              <div className="card-body p-5">
-                <h3 className="card-title text-lg">{project.title}</h3>
-                <p className="text-sm text-base-content/60 leading-relaxed">
-                  {project.description}
-                </p>
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-white mb-1 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-white text-sm font-medium mb-4">
+                    {project.subtitle}
+                  </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 mt-2">
-                  {project.tags.map((tag, j) => (
-                    <span
-                      key={j}
-                      className="badge badge-sm badge-outline badge-primary font-mono"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                  {/* Description */}
+                  <p className="text-white text-sm leading-relaxed mb-6 flex-grow">
+                    {project.description}
+                  </p>
 
-                {/* Links */}
-                <div className="card-actions justify-end mt-3">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag, j) => (
+                      <span
+                        key={j}
+                        className="px-3 py-1.5 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-white/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-ghost btn-sm gap-1.5"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-white/90 text-purple-800 font-bold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
                   >
-                    <FaGithub size={16} /> Code
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary btn-sm gap-1.5"
-                  >
-                    <FaExternalLinkAlt size={14} /> Live
+                    <FaGithub size={18} />
+                    View Project
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </a>
                 </div>
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-all duration-500 pointer-events-none" />
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

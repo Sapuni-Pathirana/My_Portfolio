@@ -1,21 +1,21 @@
-import { FaCode, FaServer, FaDatabase, FaMobileAlt } from 'react-icons/fa';
+import { FaCode, FaServer, FaDatabase, FaMobileAlt, FaLaptopCode, FaMapMarkedAlt, FaMicrochip } from 'react-icons/fa';
 import useScrollReveal from '../hooks/useScrollReveal';
 
 const highlights = [
   {
     icon: <FaCode size={24} />,
     title: 'Frontend Development',
-    description: 'Building responsive, accessible UIs with React and modern CSS frameworks.',
+    description: 'Building responsive, accessible, and visually engaging user interfaces.',
   },
   {
     icon: <FaServer size={24} />,
     title: 'Backend Development',
-    description: 'Designing RESTful APIs and server-side logic with Node.js and Spring Boot.',
+    description: 'Designing robust APIs and scalable server-side architectures.',
   },
   {
     icon: <FaDatabase size={24} />,
     title: 'Database Design',
-    description: 'Modeling and managing data with SQL and NoSQL databases.',
+    description: 'Modeling and managing data with efficient storage solutions.',
   },
   {
     icon: <FaMobileAlt size={24} />,
@@ -45,12 +45,8 @@ export default function About() {
         >
           {/* Profile Image */}
           <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 overflow-hidden">
-                <img src="/images/Profile.jpeg" alt="Sapuni Pathirana" className="w-full h-full object-cover" />
-              </div>
-              {/* Decorative border */}
-              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-primary/20 -z-10" />
+            <div className="w-64 md:w-80 aspect-[2/3] rounded-2xl border-2 border-primary/30 overflow-hidden">
+              <img src="/images/Profile.jpeg" alt="Sapuni Pathirana" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -92,4 +88,38 @@ export default function About() {
       </div>
     </section>
   );
-}
+}export const projects = [
+  {
+    title: 'Auditra',
+    subtitle: 'Auditing & Valuation ERP',
+    description: 'A full-stack ERP system for property valuation and project management featuring role-based access for 10 user types, attendance tracking, leave management, payment slip generation, and mobile field data collection with photo and GPS support.',
+    tags: ['React', 'Django', 'Flutter', 'PostgreSQL', 'REST API'],
+    github: 'https://github.com/Pasidu-Mihiranga/Auditra-CodeCogs',
+    icon: FaCode,
+  },
+  {
+    title: 'Gold Victoria',
+    subtitle: 'E-Commerce & Hotel Management',
+    description: 'An e-commerce and hotel management platform with a dedicated client-side interface and a Java-based backend, supporting product browsing, ordering, and hotel service management.',
+    tags: ['JavaScript', 'Java', 'CSS', 'HTML'],
+    github: 'https://github.com/sasindu345/Gold-Victoria',
+    icon: FaLaptopCode,
+  },
+  {
+    title: 'Piyoway',
+    subtitle: 'Tourist Guide (Galle MVP)',
+    description: 'A PWA-ready tourist guide application for Galle with points of interest, listings, itinerary planning, and an admin dashboard. Built as a monorepo with a Next.js frontend and NestJS API backend.',
+    tags: ['Next.js', 'NestJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'Docker'],
+    github: 'https://github.com/Gmora-CodeTheFuture/Piyoway',
+    icon: FaMapMarkedAlt,
+  },
+  {
+    title: 'Maze Master',
+    subtitle: 'Microcontroller-Based Maze Game',
+    description: 'A two-player Arduino-based competitive maze game with wirelessly controlled cars, dynamic rotating walls, RFID scoring, ultrasonic collision avoidance, and a Python-driven audio system for sound effects.',
+    tags: ['Arduino', 'ESP32', 'C++', 'Python', 'ESP-NOW', 'RFID'],
+    github: 'https://github.com/ThanojBuddhima/MazeMaster_codes',
+    icon: FaMicrochip,
+  },
+];
+

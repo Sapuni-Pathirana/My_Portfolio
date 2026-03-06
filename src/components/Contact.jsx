@@ -1,31 +1,37 @@
 import { useState } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import useScrollReveal from '../hooks/useScrollReveal';
 
 const contactInfo = [
   {
     icon: <FaEnvelope size={20} />,
     label: 'Email',
-    value: 'sapuni.pathirana@example.com',
-    href: 'mailto:sapuni.pathirana@example.com',
+    value: 'sapunimadhushikapathirana@gmail.com',
+    href: 'mailto:sapunimadhushikapathirana@gmail.com',
+  },
+  {
+    icon: <FaPhone size={20} />,
+    label: 'Phone',
+    value: '+94 763479947',
+    href: 'tel:+94763479947',
   },
   {
     icon: <FaMapMarkerAlt size={20} />,
     label: 'Location',
-    value: 'Moratuwa, Sri Lanka',
+    value: 'Gampaha, Sri Lanka',
     href: null,
   },
   {
     icon: <FaLinkedin size={20} />,
     label: 'LinkedIn',
     value: 'linkedin.com/in/sapuni',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/sapuni-madhushika-pathirana-5798a2302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
   },
   {
     icon: <FaGithub size={20} />,
     label: 'GitHub',
-    value: 'github.com/sapuni',
-    href: 'https://github.com',
+    value: 'github.com/sapuni-pathirana',
+    href: 'https://github.com/Sapuni-Pathirana',
   },
 ];
 

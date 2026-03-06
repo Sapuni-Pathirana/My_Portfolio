@@ -6,26 +6,34 @@ const timeline = [
     icon: <FaGraduationCap size={20} />,
     title: 'BSc (Hons) in Information Technology',
     institution: 'University of Moratuwa — Faculty of IT',
-    period: '2022 — Present',
+    period: '2024 — Present',
     description:
       'Specializing in software engineering, web technologies, data structures, algorithms, database systems, and software project management. Engaged in academic projects and collaborative team-based development.',
   },
   {
     icon: <FaSchool size={20} />,
-    title: 'G.C.E. Advanced Level — Physical Science',
-    institution: 'Your School Name',
-    period: '2019 — 2021',
+    title: 'G.C.E. Advanced Level ',
+    institution: 'Gampaha Rathnawali Balika Vidyalaya',
+    period: '2020 — 2023',
     description:
-      'Completed A/L examination in the Physical Science stream with strong results, laying the foundation for pursuing higher education in technology and engineering.',
+      'Completed A/L examination — Combined Maths (A), Information & Communication Technology (A), Physics (B).',
   },
   {
     icon: <FaSchool size={20} />,
     title: 'G.C.E. Ordinary Level',
-    institution: 'Your School Name',
-    period: '2018',
+    institution: 'Sapugaskanda Vishaka Balika Vidyalaya',
+    period: '2014 — 2019',
     description:
-      'Achieved excellent results in O/L examinations, demonstrating strong academic performance across all subjects.',
+      'Achieved 9 A passes in O/L examinations, demonstrating strong academic performance across all subjects.',
   },
+  {
+    icon: <FaSchool size={20} />,
+    title: 'Primary Education & Grade 5 Scholarship',
+    institution: 'Dompe Devi Balika Vidyalaya',
+    period: '2009 — 2013',
+    description:
+      'Passed the Grade 5 Scholarship Examination with a mark of 169, showcasing early academic excellence.',
+},
 ];
 
 export default function Education() {
@@ -37,7 +45,7 @@ export default function Education() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            <span className="gradient-text">Education</span>
+            Academic <span className="gradient-text">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
@@ -49,7 +57,7 @@ export default function Education() {
           }`}
         >
           {/* Line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 bg-primary/60 -translate-x-1/2" />
 
           {timeline.map((item, i) => (
             <div

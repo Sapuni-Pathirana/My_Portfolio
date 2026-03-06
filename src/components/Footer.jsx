@@ -9,7 +9,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo / Name */}
           <div className="text-center md:text-left">
-            <p className="font-bold text-lg gradient-text">&lt;Sapuni /&gt;</p>
+            <h1 className="text-lg font-bold flex items-center gap-2 justify-center md:justify-start">
+              Sapuni Pathirana
+            </h1>
             <p className="text-xs text-base-content/50 mt-1">
               IT Undergraduate | University of Moratuwa
             </p>
@@ -18,7 +20,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/Sapuni-Pathirana"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost btn-circle btn-sm hover:text-primary"
@@ -27,7 +29,7 @@ export default function Footer() {
               <FaGithub size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sapuni-madhushika-pathirana-5798a2302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost btn-circle btn-sm hover:text-primary"
@@ -36,7 +38,7 @@ export default function Footer() {
               <FaLinkedin size={18} />
             </a>
             <a
-              href="mailto:sapuni.pathirana@example.com"
+              href="mailto:sapunimadhushikapathirana@gmail.com"
               className="btn btn-ghost btn-circle btn-sm hover:text-primary"
               aria-label="Email"
             >
