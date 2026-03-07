@@ -54,8 +54,8 @@ export default function Hero() {
                 <HiArrowRight size={18} />
               </Link>
               <a
-                href="/resume.pdf"
-                download
+                href="/Sapuni Pathirana CV.pdf"
+                download="Sapuni Pathirana CV.pdf"
                 className="btn btn-outline btn-primary btn-lg text-base font-semibold hover:scale-105 transition-all gap-2"
               >
                 <HiDownload size={18} />
